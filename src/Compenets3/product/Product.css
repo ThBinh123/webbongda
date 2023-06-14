@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin-top: 70px;
+}
+.row .card{
+    height: 100%;
+    overflow: hidden;
+
+}
+.row .card .card-img-top{
+   height: 100%;
+}
+.row .card .card-body{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.row .card .card-body .btn{
+    background-color: #192a56;
+}
+.row .card .card-body .btn:hover{
+    background-color: #f1c40f;
+}
