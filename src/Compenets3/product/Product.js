@@ -7,7 +7,8 @@ export default function Product() {
     const { product, addCart,filterList,setCheck ,handle_sweel} = useContext(AppContext);
     return (
         <div className="container">
-            <button onClick={()=>setCheck(1)}>Loc</button>
+            <div><button onClick={()=>setCheck(1)}>Loc</button></div>
+            <h1>TẤT CẢ SẢN PHẨM</h1>
             <div className="row">
                 {product && filterList(product).map((item, key) => (
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 product-item " >

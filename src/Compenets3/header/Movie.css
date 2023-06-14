@@ -11,25 +11,41 @@ body{
     width: 100%;
 }
 .Shop .logo{
-   border: 1px solid red;
-   width: 80px;
+   width: 10%;
 }
 .Shop{
     background:#353b48;
     width: 100%;
-    height: 70px;
-    display: flex;
     align-items: center;
-    justify-content:space-around;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1080;
     overflow: hidden;
+    height: 130px;
+}
+.Shop1{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 5px;
+}
+.Shop1 .search{
+    width: 50%;
+}
+.Shop1 .search input{
+    width: 90%;
+    border: none;
+    padding: 4px;
+}
+.Shop1 .search button{
+    border: none;
+    padding: 4px;
+    background-color: #fff;
 }
 .Shop .shop_pt {
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     margin-left: 30px;
     /* font-weight: 900; */
@@ -41,4 +57,9 @@ body{
     padding: 3px 10px;
     color: #e84118;
     
+}
+.Shop2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 .container {
-    margin-top: 70px;
+    margin-top: 130px;
+
 }
 .row .card{
     height: 100%;
@@ -24,4 +25,7 @@
 }
 .row .card .card-body .btn:hover{
     background-color: #f1c40f;
+}
+h1{
+    text-align: center;
 }
