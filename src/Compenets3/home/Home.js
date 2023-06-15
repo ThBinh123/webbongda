@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Home() {
     return (
         <div className="home">
-            <h1> SẢN PHẨM NỔI BẬT </h1>
+            <h1> SẢN PHẨM NỔI BẬT Nhất </h1>
             <div className="Slide"> <ControlledCarousel /></div>
             <div className="text">
                         <h1>Sản Phẩm Theo Thương Hiệu</h1>
