@@ -5,7 +5,7 @@ import Product from "./Compenets3/product/Product";
 import Cart from "./Compenets3/cart/Cart";
 import Product2 from "./Compenets3/product2/Product2";
 import Movie from "./Compenets3/header/Movie";
-import Size from "./Compenets3/size/Size";
+import Size from "./Compenets3/size/size";
 import { Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {

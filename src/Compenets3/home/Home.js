@@ -8,6 +8,10 @@ import image3 from "../../imgsProduct/logo-adidas-vector.png"
 import { AiTwotoneStar } from "react-icons/ai";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imageFooter from "./banner-top.jpg"
+import messi from "./lionel-messi.jpg"
+import kevin from "./kevin.jpg"
+import ramos from "./ramos.jpg"
+import vini from "./vini.jpg"
 export default function Home() {
     return (
         <div className="home">
@@ -31,9 +35,24 @@ export default function Home() {
                 </div>
 
             </div>
+            <h1>SẢN PHẨM THEO VỊ TRÍ</h1>
             <div className="main">
-                <h1>SẢN PHẨM THEO VỊ TRÍ</h1>
+                
                 <div className="box-main">
+                    <img src={messi}></img>
+                    <p>Tiền Đạo</p>
+                </div>
+                <div className="box-main">
+                    <img src={kevin}></img>
+                    <p>Tiền Vệ Trung Tâm</p>
+                </div>
+                <div className="box-main">
+                    <img src={vini}></img>
+                    <p>Tiền Đạo Chạy Cánh</p>
+                </div>
+                <div className="box-main">
+                    <img src={ramos}></img>
+                    <p>Hậu Vệ</p>
                 </div>
             </div>
             <div className="footer">
