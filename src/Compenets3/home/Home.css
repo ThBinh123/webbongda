@@ -1,0 +1,31 @@
+.home {
+    text-align: center;
+    margin-top: 160px;
+    justify-self: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home .box-home{
+    width: 100%;
+}
+.contain{
+    display: flex;
+}
+.contain .box{
+    width: calc(100% / 3);
+    border: 1px solid black;
+}
+.contain .box img{
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    display: flex;
+}
+.footer .box-footer{
+    width: calc(100% / 3);
+}
+.footer .box-footer img{
+    width: 80%;
+}

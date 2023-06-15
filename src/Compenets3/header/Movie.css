@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background: #dcdde1;
+}
+.Shop img{
+    width: 100%;
+}
+.Shop .logo{
+   width: 6%;
+}
+.Shop{
+    background:#4b4b4b;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1080;
+    overflow: hidden;
+    height: 150px;
+}
+.Shop1{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 5px;
+}
+.Shop1 .search{
+    width: 50%;
+}
+.Shop1 .search input{
+    width: 90%;
+    border: none;
+    padding: 4px;
+}
+.Shop1 .search button{
+    border: none;
+    padding: 4px;
+    background-color: #fff;
+}
+.Shop .shop_pt {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 30px;
+    /* font-weight: 900; */
+}
+.Shop .shop_pt:hover{
+    color: #f1c40f;
+}
+.length {
+    padding: 3px 10px;
+    color: #e84118;
+    
+}
+.Shop2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
