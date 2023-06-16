@@ -11,10 +11,10 @@ body{
     width: 100%;
 }
 .Shop .logo{
-   width: 10%;
+   width: 6%;
 }
 .Shop{
-    background:#353b48;
+    background:#4b4b4b;
     width: 100%;
     align-items: center;
     position: fixed;
@@ -22,7 +22,7 @@ body{
     left: 0;
     z-index: 1080;
     overflow: hidden;
-    height: 130px;
+    height: 150px;
 }
 .Shop1{
     display: flex;
@@ -45,7 +45,7 @@ body{
 }
 .Shop .shop_pt {
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     margin-left: 30px;
     /* font-weight: 900; */

@@ -2,7 +2,7 @@ import { AppContext } from "../../AppContext";
 import { useContext } from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 import "./Product.css";
-
+// import image2 from "../../imgsProduct/Puma_logo.jpg";
 export default function Product() {
     const { product, addCart,filterList,setCheck ,handle_sweel} = useContext(AppContext);
     return (
@@ -35,7 +35,7 @@ export default function Product() {
     )
 }
 
-// import image2 from "../../imgsProduct/giayAdidas.jpg";
+
 // import image3 from "../../imgsProduct/giayPuma.jpg";
 // import image4 from "../../imgsProduct/giayAdidas1.jpg";
 // import image5 from "../../imgsProduct/giayAdidas2.jpg";

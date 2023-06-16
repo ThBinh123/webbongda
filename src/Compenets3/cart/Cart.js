@@ -8,7 +8,8 @@ export default function Cart() {
     console.log(cart);
     return (
 
-        <table className="carts">
+        <div className="carts">
+            <div><h1>GIỎ HÀNG</h1></div>
             {
                 cart && cart.map((item, index) =>
                 (
@@ -32,6 +33,6 @@ export default function Cart() {
                 )
                 )
             }
-        </table>
+        </div>
     )
 }
