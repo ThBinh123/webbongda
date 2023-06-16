@@ -1,34 +1,15 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import swal from "sweetalert";
-export const AppContext = createContext({});
+export const AppContext2 = createContext({});
 export const AppProvider = ({ children }) => {
     const [show, setShow] = useState(false); // ko co show
     const [count, setCount] = useState(1); // ko co count
     //++++++++++++++++++++++++++++++++++++++++++++++++++++
-    const [product, setProduct] = useState(null);
     const [product2, setProduct2] = useState(null);
     const [cart, setCart] = useState([]);
-    const [cart2, setCart2] = useState([]);
     const [check, setCheck]=useState(0);
     const getData = async () => {
-        const data=`https://645cda6b250a246ae3103b6a.mockapi.io/List`
-        axios
-            .get(data)
-            .then(res => {
-                setProduct(res.data)
-                console.log(res.data)
-            })
-            .catch(error => {
-                if (error.response.status == "404") {
-
-                }
-            })
-    }
-    useEffect(() => {
-        getData();
-    }, []);
-    const getData2 = async () => {
         const data=`https://645cda6b250a246ae3103b6a.mockapi.io/products`
         axios
             .get(data)
@@ -43,26 +24,11 @@ export const AppProvider = ({ children }) => {
             })
     }
     useEffect(() => {
-        getData2();
+        getData();
     }, []);
     //++++++++++++++++++++++++++++++++++++++++++
    
     const addCart = async (id) => {
-        const kq = product.find((item) => item.id == id)
-        const index = cart.findIndex((item) => item.id == id)
-
-        if (index >= 0) {
-            const newList = cart;
-            newList[index]["qty"]++;
-            setCart(newList);
-            localStorage.setItem('cart_list', JSON.stringify(newList))
-        }
-        else {
-            setCart([...cart, { ...kq, qty: 1 }])
-            localStorage.setItem('cart_list', JSON.stringify([...cart, { ...kq, qty: 1 }]));
-        }
-    }
-    const addCart2 = async (id) => {
         const kq = product2.find((item) => item.id == id)
         const index = cart.findIndex((item) => item.id == id)
 
@@ -77,7 +43,6 @@ export const AppProvider = ({ children }) => {
             localStorage.setItem('cart_list', JSON.stringify([...cart, { ...kq, qty: 1 }]));
         }
     }
-
 
     console.log(cart);
 
@@ -130,12 +95,12 @@ export const AppProvider = ({ children }) => {
         });
     }
     return (
-        <AppContext.Provider
+        <AppContext2.Provider
             value={{
                 show,
                 count,
                 setShow,
-                product,
+                product2,
                 cart,
                 addCart,
                 changeMinus,
@@ -146,11 +111,8 @@ export const AppProvider = ({ children }) => {
                 filterList,
                 check,
                 setCheck,
-                product2,
-                cart,
-                addCart2,
             }}>
             {children}
-        </AppContext.Provider>
+        </AppContext2.Provider>
     )
 } 
