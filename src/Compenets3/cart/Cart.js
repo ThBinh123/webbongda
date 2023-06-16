@@ -1,15 +1,13 @@
 import { useContext } from "react"
 import { AppContext } from "../../AppContext"
 import "./Cart.css";
-import { Row } from "react-bootstrap";
+import { HiOutlineTrash } from "react-icons/hi2";
 
 export default function Cart() {
     const { ChangeQty, cart, changeMinus, changeSum, DeleteMode, handle_sweel } = useContext(AppContext)
     console.log(cart);
     return (
-
         <div className="carts">
-            <div><h1>GIỎ HÀNG</h1></div>
             {
                 cart && cart.map((item, index) =>
                 (
@@ -28,7 +26,7 @@ export default function Cart() {
                         <button className="buy_shop" onClick={handle_sweel}>Buy</button>
                         <div className="Delete" onClick={() => {
                             DeleteMode(item.id)
-                        }}>X</div>
+                        }}><HiOutlineTrash/></div>
                     </div>
                 )
                 )

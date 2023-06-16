@@ -1,10 +1,16 @@
 .home {
     text-align: center;
-    margin-top: 160px;
+    margin-top: 150px;
     justify-self: center;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+.home h1{
+    font-size: 20px;
+    color:#f39c12;
+    margin-top: 2%;
+    margin-bottom: 3%;
 }
 .home .box-home{
     width: 100%;
@@ -15,6 +21,26 @@
     margin-left: auto;
     margin-right: auto;
 }
+.products-hot{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.products-hot img{
+    width: 100%;
+}
+.products-hot h5{
+    opacity: 0.7;
+}
+.products-hot p {
+    color :#f39c12;
+}
+.products-hot .swiper-button-next{
+    color:#f39c12;
+}
+.products-hot .swiper-button-prev{
+    color: #f39c12;
+}
 .contain{
     display: flex;
 }
@@ -22,7 +48,7 @@
     width: calc(100% / 3);
 }
 .contain .box img{
-    width: 70%;
+    width: 50%;
     height: 100%;
 }
 .main{
@@ -32,15 +58,26 @@
     width: calc(100% / 4);
 }
 .main .box-main img{
-    width: 60%;
-    height: 100%;
+    width: 90%;
 }
 .footer{
     display: flex;
     margin-top: 50px;
 }
+.footer h3{
+    font-size: 20px;
+    opacity: 0.9;
+}
+.footer p{
+    opacity: 0.7;
+}
 .footer .box-footer{
     width: calc(100% / 3);
+}
+.footer .box-footer p{
+    font-size: 12px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .footer .box-footer img{
     width: 80%;

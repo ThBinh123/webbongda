@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../AppContext";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa"
+import { FaShoppingCart,FaHome } from "react-icons/fa"
 import "./Movie.css";
 import logo from "./logo.png"
 export default function Movie() {
@@ -22,7 +22,7 @@ export default function Movie() {
             </div>
 
            <div className="Shop2">
-            <Link className="shop_pt" to="/TrangChu">Trang Chủ</Link>
+            <Link className="shop_pt" to="/TrangChu">Trang Chủ<FaHome/></Link>
             <Link className="shop_pt" to="/SanPham">Sản Phẩm</Link>
             <Link className="shop_pt" to="/PhuKien">Phụ Kiện</Link>
             <Link className="shop_pt" to="/Huong-Dan-Chon-Size">CÁCH CHỌN SIZE GIÀY</Link>

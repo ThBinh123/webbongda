@@ -11,6 +11,7 @@ export const AppProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [cart2, setCart2] = useState([]);
     const [check, setCheck]=useState(0);
+    const [check2, setCheck2]=useState(0);
     const getData = async () => {
         const data=`https://645cda6b250a246ae3103b6a.mockapi.io/List`
         axios
@@ -28,6 +29,7 @@ export const AppProvider = ({ children }) => {
     useEffect(() => {
         getData();
     }, []);
+    ////Data product2
     const getData2 = async () => {
         const data=`https://645cda6b250a246ae3103b6a.mockapi.io/products`
         axios
@@ -62,6 +64,7 @@ export const AppProvider = ({ children }) => {
             localStorage.setItem('cart_list', JSON.stringify([...cart, { ...kq, qty: 1 }]));
         }
     }
+    //////
     const addCart2 = async (id) => {
         const kq = product2.find((item) => item.id == id)
         const index = cart.findIndex((item) => item.id == id)
@@ -119,6 +122,15 @@ export const AppProvider = ({ children }) => {
             return List;
         }
     }
+    const filterList2 = (List)=>{
+        if(check2 ==1){
+            return[List[0], List[3],List[4],List[5]];
+        } else if(check2==2){
+            return[List[0], List[3],List[4],List[5],List[8]];
+        }else{
+            return List;
+        }
+    }
 
     //++++++++++++++++++++++++++++++++++++++++++
     const handle_sweel = () => {
@@ -149,6 +161,8 @@ export const AppProvider = ({ children }) => {
                 product2,
                 cart,
                 addCart2,
+                filterList2,
+                setCheck2,
             }}>
             {children}
         </AppContext.Provider>
