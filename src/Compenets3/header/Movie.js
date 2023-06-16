@@ -16,8 +16,6 @@ export default function Movie() {
             <input placeholder="Tìm Kiếm..."></input>
             <button>Tìm</button>
             </div>
-            
-           
             <Link className="shop_pt" to="/GioHang"><FaShoppingCart/> <span className="length">{cart.length}</span></Link>
             </div>
 
