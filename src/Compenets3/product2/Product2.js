@@ -2,7 +2,18 @@ import { AppContext } from "../../AppContext";
 import { useContext } from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 import "./Product2.css";
-
+import image1 from "../../imgsProduct2/bangkeodumau.jpg";
+import image2 from "../../imgsProduct2/bangkeotrang.jpg";
+import image3 from "../../imgsProduct2/bongdongluc.jpg";
+import image4 from "../../imgsProduct2/bongfifa.jpg";
+import image5 from "../../imgsProduct2/bongworldcup2022.jpg";
+import image6 from "../../imgsProduct2/combotatdai.jpg";
+import image7 from "../../imgsProduct2/gangtayadidas.jpg";
+import image8 from "../../imgsProduct2/gangtayadidas2.jpg";
+import image9 from "../../imgsProduct2/gangtayadidas3.jpg";
+import image10 from "../../imgsProduct2/gangtaynike.jpg";
+import image11 from "../../imgsProduct2/gangtaynike2.jpg";
+import image12 from "../../imgsProduct2/gangtaynike3.jpg";
 export default function Product2() {
     const { product2, addCart2,filterList2,setCheck2 ,handle_sweel} = useContext(AppContext);
     return (
@@ -47,15 +58,4 @@ export default function Product2() {
          </div>   </div>
     )
 }
-// import image1 from "../../imgsProduct2/bangkeodumau.jpg";
-// import image2 from "../../imgsProduct2/bangkeotrang.jpg";
-// import image3 from "../../imgsProduct2/bongdongluc.jpg";
-// import image4 from "../../imgsProduct2/bongfifa.jpg";
-// import image5 from "../../imgsProduct2/bongworldcup2022.jpg";
-// import image6 from "../../imgsProduct2/combotatdai.jpg";
-// import image7 from "../../imgsProduct2/gangtayadidas.jpg";
-// import image8 from "../../imgsProduct2/gangtayadidas2.jpg";
-// import image9 from "../../imgsProduct2/gangtayadidas3.jpg";
-// import image10 from "../../imgsProduct2/gangtaynike.jpg";
-// import image11 from "../../imgsProduct2/gangtaynike2.jpg";
-// import image12 from "../../imgsProduct2/gangtaynike3.jpg";
+
