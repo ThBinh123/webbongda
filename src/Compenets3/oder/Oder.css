@@ -1,0 +1,64 @@
+#Oder{
+    margin-top: 160px;
+}
+.show{
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid black;
+}
+.show img{
+    margin-right: 2%;
+}
+.voucher{
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid black;
+    width: 90%;
+}
+.voucher input{
+    width: 60%;
+}
+.ship{
+    padding: 30px;
+    border-bottom: 1px solid black;
+    width: 90%;
+}
+.ship .ship1 h5{
+    margin-left: 50%;
+}
+.oder{
+    padding: 30px;
+    border-bottom: 1px solid black;
+    width: 90%;
+    display: flex;
+}
+.oder h4{
+    margin-left: 50%;
+}
+#ship_pay{
+    padding: 20px;
+    padding-left: 20%;
+    padding-right: 5%;
+}
+.mail{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.mail .email{
+    margin-right: 5%;
+}
+.ship_home{
+    border: 1px solid black;
+    padding: 10px;
+}
+.shiper{
+    border: 1px solid black;
+    padding: 10px;
+}
+.shiper_pay{
+    border: 1px solid black;
+    padding: 10px;
+}
+.shiper_pay .select{
+    display: flex;
+}

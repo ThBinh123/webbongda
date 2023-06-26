@@ -1,0 +1,17 @@
+.sign a{
+    background:#4b4b4b;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 5px;
+    
+}
+.sign{
+    text-align: center;
+    margin-top: 2%;
+}
+.sig:hover{
+    color: #f1c40f;
+}
+.in{
+    margin-top: 160px;
+}

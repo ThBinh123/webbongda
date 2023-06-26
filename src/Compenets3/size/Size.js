@@ -3,6 +3,7 @@ import sodonike from "../size/sodonike.PNG"
 import sodoadidas from "../size/sodoadidas.PNG"
 import sodopuma from "../size/sodopuma.PNG"
 import "./Size.css"
+import Footer from "../footer/Footer"
 export default function Size(){
     return(
         <div className="size">
@@ -14,6 +15,7 @@ export default function Size(){
             <img src={sodopuma}></img>
             <h1>Chọn Size Giày ADIDAS</h1>
             <img src={sodoadidas}></img>
+            <div><Footer/></div>
         </div>
     )
 }

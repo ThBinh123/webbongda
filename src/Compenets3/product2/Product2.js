@@ -1,6 +1,7 @@
 import { AppContext } from "../../AppContext";
 import { useContext } from "react";
-import { AiTwotoneStar } from "react-icons/ai";
+import { AiTwotoneStar,AiOutlineSearch } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import "./Product2.css";
 import image1 from "../../imgsProduct2/bangkeodumau.jpg";
 import image2 from "../../imgsProduct2/bangkeotrang.jpg";
@@ -14,11 +15,27 @@ import image9 from "../../imgsProduct2/gangtayadidas3.jpg";
 import image10 from "../../imgsProduct2/gangtaynike.jpg";
 import image11 from "../../imgsProduct2/gangtaynike2.jpg";
 import image12 from "../../imgsProduct2/gangtaynike3.jpg";
+import Form from 'react-bootstrap/Form';
+import Footer from "../footer/Footer";
 export default function Product2() {
     const { product2, addCart2,filterList2,setCheck2 ,handle_sweel} = useContext(AppContext);
+    function getvalue(){
+        let value = document.getElementById("loc").value
+        return value;
+    }
     return (
         <div className="container">
-            <div><button onClick={()=>setCheck2(1)}>Loc</button></div>
+             <div className="book"><p>Trang Chủ / Phụ Kiện</p></div>
+            <div className="filter" style={{display:"flex"}}>
+            <Form.Select aria-label="Floating label select example" id="loc">
+            <option>Tất Cả</option>
+            <option value="1">Găng Tay</option>
+            <option value="2">Tất</option>
+            <option value="3">Băng Keo</option>
+            <option value="4">Bóng</option>
+          </Form.Select>
+          <button className="filter_click" onClick={() => setCheck2(getvalue)}><AiOutlineSearch/></button>
+          </div>
             <h1>TẤT CẢ SẢN PHẨM</h1>
             <div className="row">
                 {product2 && filterList2(product2).map((item, key) => (
@@ -28,7 +45,8 @@ export default function Product2() {
                             <div class="card-body">
                                 <h5 class="card-title">{item.Name}</h5>
                                 <p class="card-text">{item.Buy} vnd</p>
-                                <a href="#" class="btn btn-primary" onClick={()=>addCart2(item.id)}>Thêm Vào Giỏ Hàng</a>
+                                {/* <a href="#" class="btn btn-primary" onClick={()=>addCart2(item.id)}>Thêm Vào Giỏ Hàng</a> */}
+                                <Link class="seen" to={`/SanPham/PhuKien/${item.id}`} >Xem Chi Tiết</Link>
                                 <div className="product_icon">
                                     <i><AiTwotoneStar /></i>
                                     <i><AiTwotoneStar /></i>
@@ -55,7 +73,9 @@ export default function Product2() {
                         </div>
                     </div>
                 ))}
-         </div>   </div>
+         </div>
+         <div><Footer/></div>   
+         </div>
     )
 }
 

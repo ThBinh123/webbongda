@@ -1,20 +1,17 @@
 
 import ControlledCarousel from "./slide/Slide"
-import DarkVariantExample from "./slide_footer/slide_footer"
 import "./Home.css"
 import image1 from "../../imgsProduct/Puma_logo.jpg"
 import image2 from "../../imgsProduct/nike_logo_black.png"
 import image3 from "../../imgsProduct/logo-adidas-vector.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swiper from "./swiper/Swiper"
-import imageFooter from "./banner-top.jpg"
 import messi from "./lionel-messi.jpg"
 import kevin from "./kevin.jpg"
 import ramos from "./ramos.jpg"
 import vini from "./vini.jpg"
-import shopee from "./logo_shopee_img.webp"
-
-import { FaFacebook, FaInstagramSquare, FaYoutube, FaTiktok } from "react-icons/fa";
+import CoolPage from "../header/ScrollToTop"
+import Footer from "../footer/Footer"
 export default function Home() {
     return (
         <div className="home">
@@ -62,7 +59,7 @@ export default function Home() {
                     <p>Hậu Vệ</p>
                 </div>
             </div>
-            <div className="footer">
+            {/* <div className="footer">
                 <div className="box-footer">
                     <h3>HỖ TRỢ</h3>
                     <p>GỌI TƯ VẤN ĐẶT HÀNG ONLINE(08:30-21:00 MỖI NGÀY)</p>
@@ -89,7 +86,9 @@ export default function Home() {
 
                 </div>
 
-            </div>
+            </div> */}
+            <div><Footer/></div>
+            <button><CoolPage/></button>
         </div>
 
     )

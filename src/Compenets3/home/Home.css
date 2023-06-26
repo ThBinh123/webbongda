@@ -1,6 +1,6 @@
 .home {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 180px;
     justify-self: center;
     width: 90%;
     margin-left: auto;
@@ -60,28 +60,7 @@
 .main .box-main img{
     width: 90%;
 }
-.footer{
-    display: flex;
-    margin-top: 50px;
-}
-.footer h3{
-    font-size: 20px;
-    opacity: 0.9;
-}
-.footer p{
-    opacity: 0.7;
-}
-.footer .box-footer{
-    width: calc(100% / 3);
-}
-.footer .box-footer p{
-    font-size: 12px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-.footer .box-footer img{
-    width: 80%;
-}
+
 /* .footer .box-footer img:hover::before{
         position: absolute;
         z-index: 1;

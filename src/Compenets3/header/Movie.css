@@ -9,11 +9,12 @@ body{
 .Shop img{
     width: 100%;
 }
-.Shop .logo{
+.Shop1 .logo{
    width: 6%;
 }
 .Shop{
-    background:#4b4b4b;
+    /* background:#4b4b4b; */
+    background: linear-gradient( #4b4b4b,#353b48,#4b4b4b);
     width: 100%;
     align-items: center;
     position: fixed;
@@ -21,13 +22,17 @@ body{
     left: 0;
     z-index: 1080;
     overflow: hidden;
-    height: 150px;
+    height: 180px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .Shop1{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    padding: 5px;
+    padding-bottom: 10px;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 .Shop1 .search{
     width: 50%;
@@ -44,7 +49,7 @@ body{
 }
 .Shop .shop_pt {
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     /* margin-left: 30px; */
     /* font-weight: 900; */
@@ -53,12 +58,16 @@ body{
     color: #f1c40f;
 }
 .length {
-    padding: 3px 10px;
     color: #e84118;
+    font-size: 20px;
     
 }
 .Shop2{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.fashop .shop_pt{
+    margin-left: 30px;
+    font-size: 30px;
 }
