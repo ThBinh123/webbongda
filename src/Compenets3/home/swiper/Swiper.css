@@ -2,3 +2,13 @@
     background:#dcdde1 ;
     height: 350px;
 }
+.box-swiper .linkswiper{
+    text-decoration: none;
+    color: black;
+}
+.box-swiper .linkswiper:hover{
+    color: #f39c12;
+}
+.box-swiper .linkswiper h5{
+    font-size: 15px;
+}

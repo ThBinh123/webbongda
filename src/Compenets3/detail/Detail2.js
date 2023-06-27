@@ -30,7 +30,9 @@ const Detail2 = () =>{
     
     const ShowDetail = () =>{
         return(
+            
             <div className="row" id="Detail" style={{width:"100%", padding:"20px"}}>
+                 
                 <div className="col-md-6" id="img">
                     <img src={detail2.imageUrl} alt={detail2.title} style={{width:"80%"}}></img>
                 </div>
@@ -67,7 +69,7 @@ const Detail2 = () =>{
                         <p><FaMapMarkerAlt/> 43A ĐIỆN BIÊN PHỦ, PHƯỜNG 15, QUẬN BÌNH THẠNH</p>
                         <p><FaMapMarkerAlt/> 637C TRẦN HƯNG ĐẠO, PHƯỜNG 01, QUẬN 5</p>
                     </div >
-                    <Link class="buy" to={`/DatHang/${detail2.id}`} style={{marginRight:"10px"}} >Mua Ngay</Link>
+                    <Link class="buy" to={`/DatHang/PhuKien/${detail2.id}`} style={{marginRight:"10px"}} >Mua Ngay</Link>
                     <Link to="/GioHang" class="addcart" onClick={()=>addCart2(detail2.id)}>
                         <span onClick={handle_sweel3}>Thêm Vào Giỏ Hàng</span>
                         </Link>
@@ -78,9 +80,14 @@ const Detail2 = () =>{
             )
     }
     return(
+
         <div >
-            <div>
+            
+            <div className="showdetail">
                 <div>
+                <p>Trang chủ /
+                    Giày đá bóng /
+                   {detail2.Name}</p>
                     <ShowDetail/>
                 </div>
                 <div><Footer/></div>

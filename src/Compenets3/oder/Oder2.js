@@ -11,8 +11,8 @@ export default function Oder() {
     useEffect(() => {
         const getOder = async () => {
             setLoading(true);
-            const response = await fetch(`https://645cda6b250a246ae3103b6a.mockapi.io/List/${id}`)
-            setOder(await response.json());
+            const response2=await fetch(`https://645cda6b250a246ae3103b6a.mockapi.io/products/${id}`)
+            setOder(await response2.json());
             setLoading(false);
         }
         getOder();

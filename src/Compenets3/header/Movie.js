@@ -10,9 +10,9 @@ export default function Movie() {
     return (
 
         <div className="Shop">
-            <p style={{color:"#fff"}}>NEYMARSPORT.COM - SINCE 2012 - LUÔN LUÔN CAM KẾT HÀNG CHÍNH HÃNG</p>
+            <p className="since" style={{color:"#fff"}}>FOOTBALLSTORE.COM - SINCE 2012 - LUÔN LUÔN CAM KẾT HÀNG CHÍNH HÃNG</p>
             <div className="Shop1">
-                <img src={logo} className="logo"></img>
+                <Link className="logo" to="/"><img src={logo} ></img></Link>
                 <div className="search">
                     <input placeholder="Tìm Kiếm..."></input>
                     <button>Tìm</button>

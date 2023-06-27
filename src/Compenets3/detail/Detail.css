@@ -56,6 +56,10 @@
 h5{
    margin-top: 20px;
 }
-#Detail{
-    margin-top: 160px;
+.showdetail{
+    margin-top: 180px;
+}
+.showdetail p{
+    padding: 10px;
+    padding-left: 10%;
 }

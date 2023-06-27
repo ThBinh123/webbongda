@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FormFloatingBasicExample from "./Compenets3/signin/singnin";
 import FormFloatingLayoutExample from "./Compenets3/signup/signup";
 import Oder from "./Compenets3/oder/Oder";
+import Oder2 from "./Compenets3/oder/Oder2";
 import OderCart from "./Compenets3/oder/OderCart";
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
           <Route path="/Huong-Dan-Chon-Size" element={<Size />}></Route>
           <Route path="/Signin" element={<FormFloatingBasicExample/>}></Route>
           <Route path="/Signup" element={<FormFloatingLayoutExample/>}></Route>
-          <Route path="/DatHang/:id" element={<Oder />}></Route>
+          <Route path="/DatHang/Giay/:id" element={<Oder />}></Route>
+          <Route path="/DatHang/PhuKien/:id" element={<Oder2 />}></Route>
           <Route path="/DatHang/ThanhToan" element={<OderCart />}></Route>
         </Routes>
       </AppProvider>
