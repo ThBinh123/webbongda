@@ -32,6 +32,18 @@
     border-bottom: 1px solid black;
     width: 90%;
 }
+.ship_oder1{
+    display: flex;
+}
+.ship_oder1 h5{
+    margin-left: 58%;
+}
+.ship_oder2{
+    display: flex;
+}
+.ship_oder2 h5{
+    margin-left: 50%;
+}
 .voucher_oder{
     text-align: center;
     width: 90%;
@@ -40,7 +52,12 @@
 }
 .sum_oderCart{
     width: 90%;
+    display: flex;
 }
+.sum_oderCart h5{
+    margin-left: 55%;
+}
+
 #Pay{
     margin-top: 160px;
     border: 1px solid black;
@@ -73,7 +90,4 @@
 .shiper_pay{
     border: 1px solid black;
     padding: 10px;
-}
-.shiper_pay .select{
-    display: flex;
 }

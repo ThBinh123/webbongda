@@ -3,6 +3,9 @@
     margin-top: 50px;
     justify-content: center;
     text-align: center;
+    padding: 30px 30px;
+    color: #fff;
+    background: linear-gradient( #4b4b4b,#353b48,#4b4b4b);
 }
 .footer h3{
     font-size: 20px;
@@ -27,13 +30,14 @@
 }
 .footer .box-footer img{
     width: 80%;
+    padding: 10px;
 }
 .internet a{
     font-size: 30px;
 }
 .BCT{
     display: flex;
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;

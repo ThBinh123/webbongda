@@ -24,6 +24,7 @@ export default function Product() {
         let value = document.getElementById("loc").value
         return value;
     }
+    console.log(getvalue)
     return (
         <div className="container">
             <div className="book"><p>Trang Chủ / Tất Cả Sản Phẩm</p></div>
@@ -48,7 +49,7 @@ export default function Product() {
 
                                 <h5 class="card-title">{item.Name}</h5>
                                 <p class="card-text">{item.Buy} vnd</p>
-                                <Link class="seen" to={`/SanPham/Giay/${item.id}`} >Xem Chi Tiết</Link>
+                                <Link class="seen" to={`/SanPham/Giay/${item.id}`} >Xem Sản Phẩm</Link>
                                 {/* <a href="#" class="btn btn-primary" onClick={()=>addCart(item.id)}><span onClick={handle_sweel2}>Thêm Vào Giỏ Hàng</span></a> */}
                                 <div className="product_icon">
                                     <i><AiTwotoneStar /></i>

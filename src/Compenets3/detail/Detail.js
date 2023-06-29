@@ -2,15 +2,16 @@ import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../../AppContext"
 import "./Detail.css";
 import { useParams } from "react-router-dom";
-import { AiTwotoneStar } from "react-icons/ai";
+import { AiTwotoneStar, AiOutlineSearch } from "react-icons/ai";
 import { FaStore, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom"
 import Footer from "../footer/Footer";
+import Form from 'react-bootstrap/Form';
 const Detail = () => {
-    const { addCart, handle_sweel2, addCart2 } = useContext(AppContext);
+    const { addCart, handle_sweel2, addCart2, filterSize } = useContext(AppContext);
     const { id } = useParams();
     const [detail, setDetail] = useState([]);
-    const [detail2, setDetail2] = useState([]);
+    const [size, setSize] = useState([]);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         const getDetail = async () => {
@@ -21,21 +22,19 @@ const Detail = () => {
         }
         getDetail();
     }, []);
-    useEffect(() => {
-        const getDetail2 = async () => {
-            setLoading(true);
-            const response = await fetch(`https://645cda6b250a246ae3103b6a.mockapi.io/products/${id}`)
-            setDetail2(await response.json());
-            setLoading(false);
-        }
-        getDetail2();
-    }, []);
     const Loading = () => {
         return (
             <>
                 loading.....
             </>
         )
+    }
+    function getsize() {
+        let value = document.getElementsById("fullsize").value
+        return value;
+        document.write(value);
+        document.getElementsByClassName("text1").value=value;
+        
     }
 
     const ShowDetail = () => {
@@ -45,7 +44,7 @@ const Detail = () => {
                     <img src={detail.imageUrl} alt={detail.title} style={{ width: "70%" }}></img>
                 </div>
                 <div className="col-md-6">
-                    <h4 className="text-uppercase text-black-100">
+                    <h4 className="text-uppercase text-black-100" style={{fontWeight:"bold"}}>
                         {detail.Name}
                     </h4>
                     <div className="product_icon" style={{ color: "#f1c40f" }}>
@@ -54,13 +53,14 @@ const Detail = () => {
                         <i><AiTwotoneStar /></i>
                         <i><AiTwotoneStar /></i>
                         <i><AiTwotoneStar /></i>
-                        <i className="review">(4 review)</i>
+                        <i className="review" style={{color:"black"}}>(4 review)</i>
                     </div>
                     <h3 className="display-6 fw-blod my-4 text-black-100">
                         {detail.Buy} vnd
                     </h3>
-                    <h4 style={{ color: "red" }}>CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG</h4>
-                    <h5>SIZE ( <Link className="helpsize" to="/Huong-Dan-Chon-Size">CÁCH CHỌN SIZE GIÀY</Link>) </h5>
+                    <h3 className="text1"></h3>
+                    <h4 style={{ color: "red",fontSize:"19px",fontWeight:"bold"  }}>CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG</h4>
+                    <h6>SIZE ( <Link className="helpsize" to="/Huong-Dan-Chon-Size">CÁCH CHỌN SIZE GIÀY</Link>) </h6>
                     <div className="sizeoder" style={{ display: "flex" }}>
                         <div ><input type="radio" id="html" name="fav_language" value="30"></input><p>39</p></div>
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="40"></input><p>40</p></div>
@@ -69,7 +69,6 @@ const Detail = () => {
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="43"></input><p>43</p></div>
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="44"></input><p>44</p></div>
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="45"></input><p>45</p></div>
-
                     </div>
                     <div className="address">
                         <h3> <FaStore /> CÓ TẠI 3 CỬA HÀNG</h3>
@@ -88,16 +87,14 @@ const Detail = () => {
         )
     }
     return (
-        <div >
-            <div className="showdetail">
+        <div className="showdetail">
             <p>Trang chủ /
-                    Giày đá bóng /
-                   {detail.Name}</p>
-                <div>
-                    <ShowDetail />
-                </div>
-                <div><Footer /></div>
+                Giày đá bóng /
+                {detail.Name}</p>
+            <div>
+                <ShowDetail />
             </div>
+            <div><Footer /></div>
         </div>
     )
 }

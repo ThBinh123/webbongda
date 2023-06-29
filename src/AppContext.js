@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [check, setCheck]=useState(0);
     const [check2, setCheck2]=useState(0);
+    const [size, setSize]=useState(0);
     const [OderList, setOderList] = useState([]);
     const {id} = useParams();
     const getData = async () => {
@@ -158,6 +159,14 @@ export const AppProvider = ({ children }) => {
             return List;
         }
     }
+    const filterSize = (size)=>{
+        if(size ==39){
+            return 39;
+        }
+        else if(size==40){
+            return 40;
+        }
+    }
 
     //++++++++++++++++++++++++++++++++++++++++++
     const handle_sweel = () => {
@@ -212,6 +221,9 @@ export const AppProvider = ({ children }) => {
                 handle_sweel2,
                 handle_sweel3,
                 id,
+                filterSize,
+                size,
+                setSize,
                 
             }}>
             {children}
