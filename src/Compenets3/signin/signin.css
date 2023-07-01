@@ -10,8 +10,12 @@
     margin-top: 2%;
 }
 .sig:hover{
-    color: #f1c40f;
+    color: #f39c12;
 }
 .in{
     margin-top: 180px;
+    padding: 50px;
+}
+.in h1{
+    color: #f39c12;
 }

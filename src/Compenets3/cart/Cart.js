@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { AppContext } from "../../AppContext"
 import "./Cart.css";
 import { HiOutlineTrash } from "react-icons/hi2";
+import {BsCartXFill} from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Footer from "../footer/Footer";
@@ -28,17 +29,35 @@ export default function Cart() {
             x1 = x1.replace(rgx, '$1' + ',' + '$2');
         return x1 + x2;
     }
+    if(cart.length==0){
+        return(
+            <div className="cartplus" style={{
+                marginTop:"180px", 
+                textAlign:"center",
+                height:"50%",
+                paddingTop:"100px",
+                color:"#fff"
+                
+                }}>
+                <h3>CHƯA CÓ SẢN PHẨM NÀO</h3>
+                <a href="/SanPham" style={{color:"#f39c12"}}>Tiếp Tục Mua Hàng</a>
+                <div style={{marginTop:"20%"}}><Footer /></div>
+            </div>
+        )
+    }
+    else{
 
     return (
-        <div>
+        <div className="cartplus">
             <h2>GIỎ HÀNG</h2>
             <div className="carts">
+                <p></p>
 
                 {
                     cart && cart.map((item, index) =>
                     (
                         <div className="Carts_Box" key={index} >
-                            <img src={item.imageUrl} alt="" className="image-carts" style={{ width: "160px" }} />
+                            <img src={item.imageUrl} alt="" className="image-carts" />
                             <div className="font_name">{item.Name}</div>
                             <p className="prices">Giá:<div className="prices2">{item.Buy}</div></p>
                             <div className="btn">
@@ -56,11 +75,12 @@ export default function Cart() {
 
                             <div className="Delete" onClick={() => {
                                 DeleteMode(item.id)
-                            }}><HiOutlineTrash /></div>
+                            }}><BsCartXFill /></div>
                         </div>
                     )
                     )
                 }
+                
             </div>
             <div className="total">
                 <p>TỔNG CỘNG: <h3>{numberFormat(totalcart(cart).toFixed(3).replace('.', ','))}</h3></p>
@@ -69,4 +89,5 @@ export default function Cart() {
             <div><Footer /></div>
         </div>
     )
+            }      
 }

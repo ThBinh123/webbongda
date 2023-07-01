@@ -6,13 +6,16 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    background: linear-gradient( #4b4b4b,#353b48,#4b4b4b);
+
 }
 
 .home h1 {
     font-size: 20px;
     color: #f39c12;
-    margin-top: 2%;
+    margin-top: 50px;
     margin-bottom: 3%;
+    font-weight: bold;
 }
 
 .home .box-home {
@@ -31,19 +34,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
-.products-hot img {
-    width: 100%;
-}
-
-.products-hot h5 {
-    opacity: 0.7;
-}
-
-.products-hot p {
-    color: #f39c12;
-}
-
 .products-hot .swiper-button-next {
     color: #f39c12;
 }
@@ -57,12 +47,58 @@
 }
 
 .contain .box {
-    width: calc(100% / 3);
-}
+    width: calc(80% / 3);
+    position: relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 10px;
 
+    
+}
+.contain .box .linkproduct{
+    position: absolute;
+    top: -30%;
+    left: 70%;
+    color: black;
+    font-size: 20px;
+    transition: 1s;
+
+}
+.contain .box .namecontain{
+    position: absolute;
+    left: -30%;
+    top: 50%;
+    transition: 1s;
+}
+.contain .box:hover .linkproduct{
+    top: 30%;
+    color: #f39c12;
+    font-weight: bold;
+    
+}
+.contain .box:hover{
+    border: 1px solid #f39c12;
+}
+.contain .box:hover .images{
+    opacity: 0.1;
+    transition: 1s;
+    transform: scale(1.3);
+   
+}
+.contain .box:hover .namecontain{
+    left: 30%;
+    color: #f39c12;
+    font-weight: bold;
+    transition: 1s;
+    padding: 5px;
+
+}
 .contain .box img {
     width: 50%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .main {
@@ -71,10 +107,76 @@
 
 .main .box-main {
     width: calc(100% / 4);
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+.main .box-main .image_main {
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transition: 1s;
+}
+.main .box-main:hover .image_main{
+    left: -30%;
+    border: 1px solid #f39c12;
+}
+.main .box-main .text_main{
+    position: absolute;
+    top:40%;
+    right: -100%;
+    color: #f39c12;
+    font-size: 20px;
+    width: 25%;
+    transition: 1s;
+}
+.main .box-main:hover .text_main{
+    right: 4%;
+}
+.main .box-main .linkmain{
+    position: absolute;
+    top:10%;
+    right: -100%;
+    font-size: 20px;
+    color: #f39c12;
+    transition: 1s;
+}
+.main .box-main .linkmain:hover{
+   color:#e74c3c;
+}
+.main .box-main:hover .linkmain{
+    right: 10%;
+    
+}
+@media screen and (max-width : 800px) {
+    .contain {
+        display: block;
+    }
+    
+    .contain .box {
+        width:100%;
+    }
+    
+    .contain .box .images {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .main{
+        display: block;
+    }
+    .main .box-main {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+    .main .box-main .image_main {
 
-.main .box-main img {
-    width: 90%;
+    }
 }
 
 /* img::before {

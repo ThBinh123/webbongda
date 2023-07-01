@@ -2,6 +2,7 @@ import { AppContext } from "../../AppContext";
 import { useContext } from "react";
 import { AiTwotoneStar,AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import {BsFillCartPlusFill} from "react-icons/bs"
 import "./Product2.css";
 import image1 from "../../imgsProduct2/bangkeodumau.jpg";
 import image2 from "../../imgsProduct2/bangkeotrang.jpg";
@@ -24,6 +25,7 @@ export default function Product2() {
         return value;
     }
     return (
+        <div className="productplus">
         <div className="container">
              <div className="book"><p>Trang Chủ / Phụ Kiện</p></div>
             <div className="filter" style={{display:"flex"}}>
@@ -36,7 +38,7 @@ export default function Product2() {
           </Form.Select>
           <button className="filter_click" onClick={() => setCheck2(getvalue)}><AiOutlineSearch/></button>
           </div>
-            <h1>TẤT CẢ SẢN PHẨM</h1>
+            <h1>TẤT CẢ PHỤ KIỆN</h1>
             <div className="row">
                 {product2 && filterList2(product2).map((item, key) => (
                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 product-item " >
@@ -55,6 +57,7 @@ export default function Product2() {
                                     <i><AiTwotoneStar /></i>
                                     <i className="review">(1 review)</i>
                                 </div>
+                                <div><BsFillCartPlusFill/></div>
                                 
                                 {/* <h3>{image1}</h3>
                                 <h3>{image2}</h3>
@@ -74,7 +77,9 @@ export default function Product2() {
                     </div>
                 ))}
          </div>
-         <div><Footer/></div>   
+           
+         </div>
+         <Footer/>
          </div>
     )
 }

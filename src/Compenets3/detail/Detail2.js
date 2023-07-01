@@ -20,13 +20,6 @@ const Detail2 = () => {
         }
         getDetail2();
     }, []);
-    const Loading = () => {
-        return (
-            <>
-                loading.....
-            </>
-        )
-    }
 
     const ShowDetail = () => {
         return (
@@ -51,7 +44,7 @@ const Detail2 = () => {
                     <h3 className="display-6 fw-blod my-4">
                         {detail2.Buy} vnd
                     </h3>
-                    <h4 style={{ color: "red",fontSize:"19px",fontWeight:"bold" }}>CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG</h4>
+                    <h4 className="text2">CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG</h4>
                     {/* <h5>SIZE ( <Link className="helpsize" to="/Huong-Dan-Chon-Size">CÁCH CHỌN SIZE GIÀY</Link>) </h5>
                     <div className="sizeoder" style={{ display: "flex" }}>
                         <div ><input type="radio" id="html" name="fav_language" value="30"></input><p>39</p></div>
@@ -69,7 +62,7 @@ const Detail2 = () => {
                         <p><FaMapMarkerAlt /> 43A ĐIỆN BIÊN PHỦ, PHƯỜNG 15, QUẬN BÌNH THẠNH</p>
                         <p><FaMapMarkerAlt /> 637C TRẦN HƯNG ĐẠO, PHƯỜNG 01, QUẬN 5</p>
                     </div >
-                    <Link class="buy" to={`/DatHang/PhuKien/${detail2.id}`} style={{ marginRight: "10px" }} >Mua Ngay</Link>
+                    <a class="buy" href={`/DatHang/PhuKien/${detail2.id}`} style={{ marginRight: "10px" }} >Mua Ngay</a>
                     <Link to="/GioHang" class="addcart" onClick={() => addCart2(detail2.id)}>
                         <span onClick={handle_sweel3}>Thêm Vào Giỏ Hàng</span>
                     </Link>

@@ -22,21 +22,6 @@ const Detail = () => {
         }
         getDetail();
     }, []);
-    const Loading = () => {
-        return (
-            <>
-                loading.....
-            </>
-        )
-    }
-    function getsize() {
-        let value = document.getElementsById("fullsize").value
-        return value;
-        document.write(value);
-        document.getElementsByClassName("text1").value=value;
-        
-    }
-
     const ShowDetail = () => {
         return (
             <div className="row" id="Detail" style={{ width: "100%", padding: "20px" }}>
@@ -53,16 +38,16 @@ const Detail = () => {
                         <i><AiTwotoneStar /></i>
                         <i><AiTwotoneStar /></i>
                         <i><AiTwotoneStar /></i>
-                        <i className="review" style={{color:"black"}}>(4 review)</i>
+                        <i className="review" style={{color:"#fff"}}> (4 review)</i>
                     </div>
                     <h3 className="display-6 fw-blod my-4 text-black-100">
                         {detail.Buy} vnd
                     </h3>
                     <h3 className="text1"></h3>
-                    <h4 style={{ color: "red",fontSize:"19px",fontWeight:"bold"  }}>CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG</h4>
+                    <h4 className="text2">CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG</h4>
                     <h6>SIZE ( <Link className="helpsize" to="/Huong-Dan-Chon-Size">CÁCH CHỌN SIZE GIÀY</Link>) </h6>
                     <div className="sizeoder" style={{ display: "flex" }}>
-                        <div ><input type="radio" id="html" name="fav_language" value="30"></input><p>39</p></div>
+                        <div className="sizeoder2" ><input type="radio" id="html" name="fav_language" value="30"></input><p>39</p></div>
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="40"></input><p>40</p></div>
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="41"></input><p>41</p></div>
                         <div className="sizeoder2"><input type="radio" id="html" name="fav_language" value="42"></input><p>42</p></div>
@@ -76,7 +61,7 @@ const Detail = () => {
                         <p><FaMapMarkerAlt /> 43A ĐIỆN BIÊN PHỦ, PHƯỜNG 15, QUẬN BÌNH THẠNH</p>
                         <p><FaMapMarkerAlt /> 637C TRẦN HƯNG ĐẠO, PHƯỜNG 01, QUẬN 5</p>
                     </div >
-                    <Link class="buy" to={`/DatHang/Giay/${detail.id}`} style={{ marginRight: "10px" }} >Mua Ngay</Link>
+                    <a class="buy" href={`/DatHang/Giay/${detail.id}`} style={{ marginRight: "10px" }} >Mua Ngay</a>
                     <Link to="/GioHang" class="addcart" onClick={() => addCart(detail.id)}>
                         <span onClick={handle_sweel2}>Thêm Vào Giỏ Hàng</span>
                     </Link>

@@ -30,7 +30,7 @@ export default function OderCart() {
 
             <div className="col-md-6" id="ship_pay" >
                 <div>
-                    <h3 className="py-3">FOOTBAL STORE</h3>
+                    <h3 className="py-3" style={{ color: "#f39c12", fontSize: "20px" }}>FOOTBAL STORE</h3>
                     <p>Giỏ Hàng / Thông Tin Giao Hàng </p>
                     <p>Bạn Đã Có Tài Khoản? <Link style={{
                         textDecoration: "none",
@@ -58,59 +58,62 @@ export default function OderCart() {
                 <div className="shiper_pay" style={{ width: "100%" }}>
                     <div className="select"><input type="radio" value="Thanh Toán Tại Nhà" id="html" name="fav_language1"></input><p>Thanh Toán Tại Nhà</p></div>
                     <div><input type="radio" value="Chuyển Khoản" id="html" name="fav_language1"></input><p>Chuyển Khoản</p></div>
-                    <div><button>Đặt Hàng</button></div>
+
 
                 </div>
-                </div>
+
+            </div>
 
 
-                <div className="col-md-6" id="product_oder">
+            <div className="col-md-6" id="product_oder">
 
-                    {
-                        cart && cart.map((item, index) =>
-                        (
-                            <div key={index}>
-                                <div className="oderCart" style={{ display: "flex" }}>
-                                    <img src={item.imageUrl} alt="" className="image-carts" />
-                                    <div className="name_oderCart">{item.Name}</div>
-                                    <p className="prices_oderCart"><div>{item.Buy}</div></p>
-                                    <p className="btn_oderCart"> {item.qty} </p>
+                {
+                    cart && cart.map((item, index) =>
+                    (
+                        <div key={index}>
+                            <div className="oderCart" style={{ display: "flex" }}>
+                                <img src={item.imageUrl} alt="" className="image-carts" />
+                                <div className="name_oderCart">{item.Name}</div>
+                                <p className="prices_oderCart"><div>{item.Buy}</div></p>
+                                <p className="btn_oderCart"> {item.qty} </p>
 
-                                    <p className="sum_oder">
-                                        <div>{numberFormat((item.Buy * item.qty).toFixed(3).replace('.', ','))}</div></p>
-
-                                </div>
+                                <p className="sum_oder">
+                                    <div>{numberFormat((item.Buy * item.qty).toFixed(3).replace('.', ','))}</div></p>
 
                             </div>
-                        )
-                        )
-                    }
-                    <div className="voucher_oder py-3">
-                        <input placeholder="Mã Giảm Giá" style={{
-                            padding: "8px",
-                            border: "none",
-                        }}></input>
-                        <button style={{
-                            border: "none",
-                            padding: "8px",
-                            background: "#353b48",
-                            color: "#fff",
 
-                        }}>Sử dụng</button>
+                        </div>
+                    )
+                    )
+                }
+                <div className="voucher_oder py-3">
+                    <input placeholder="Mã Giảm Giá" style={{
+                        padding: "8px",
+                        border: "none",
+                    }}></input>
+                    <button style={{
+                        border: "none",
+                        padding: "8px",
+                        background: "#353b48",
+                        color: "#fff",
 
-                    </div>
-                    <div className="ship_oder">
-                        <div className="ship_oder1  py-3"><p>Tạm tính:</p><h5>{numberFormat((totalcart(cart)).toFixed(3).replace('.', ','))} vnd</h5></div>
-                        < div className="ship_oder2"><p>Phí vận chuyển:</p><h5>  50,000 vnd </h5></div>
-                    </div>
-                    <div className="sum_oderCart py-4">
-                        <p>Tổng Cộng:</p> <h5> {numberFormat((totalcart(cart) + 50).toFixed(3).replace('.', ','))}   vnd</h5>
-                    </div>
+                    }}>Sử dụng</button>
+
                 </div>
-
-            
+                <div className="ship_oder">
+                    <div className="ship_oder1  py-3"><p>Tạm tính:</p><div className="shipodersum"><h5>{numberFormat((totalcart(cart)).toFixed(3).replace('.', ','))} vnd</h5></div></div>
+                    < div className="ship_oder2"><p>Phí vận chuyển:</p><h5>  50,000 vnd </h5></div>
+                </div>
+                <div className="sum_oderCart py-4">
+                    <p>Tổng Cộng:</p> <h5> {numberFormat((totalcart(cart) + 50).toFixed(3).replace('.', ','))}   vnd</h5>
+                </div>
+                <div className="pay"><button>Đặt Hàng</button></div>
             </div>
-)}
+
+
+        </div>
+    )
+}
 
 
 

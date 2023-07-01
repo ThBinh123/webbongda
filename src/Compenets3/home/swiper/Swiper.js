@@ -12,6 +12,7 @@ import imagehot4 from "../../../imgsProduct/giayNikeTiempo.jpg"
 import imagehot5 from "../../../imgsProduct/giayCr7.jpg"
 import { Link } from 'react-router-dom';
 import {FaSearchDollar} from "react-icons/fa"
+import {AiFillEye} from "react-icons/ai"
 
 import "./Swiper.css"
 function swiper() {
@@ -28,29 +29,29 @@ function swiper() {
         >
 
             <SwiperSlide className='box-swiper'>
-                <img className='image' src={imagehot1} style={{width:"100%",height:"280px"}} ></img>
-                <Link to="/SanPham/Giay/3" className='linkswiper'><FaSearchDollar/></Link>
-                <h5>Giày Bóng Đá Adidas-Copa</h5>
+                <img className='image' src={imagehot1} ></img>
+                <a href="/SanPham/Giay/3" className='linkswiper'><AiFillEye/></a>
+                <p className='nameswiper'>Giày Bóng Đá Adidas-Copa</p>
             </SwiperSlide>
             <SwiperSlide className='box-swiper'>
-                <img className='image' src={imagehot2} style={{width:"100%",height:"280px"}}  ></img>
-                <Link to="/SanPham/Giay/4" className='linkswiper'><FaSearchDollar/></Link>
-                <h5>Giày PUMA Trắng</h5>
+                <img className='image' src={imagehot2}  ></img>
+                <a href="/SanPham/Giay/4" className='linkswiper'><AiFillEye/></a>
+                <p className='nameswiper'>Giày PUMA Trắng</p>
             </SwiperSlide>
             <SwiperSlide className='box-swiper'>
-                <img className='image' src={imagehot3}  style={{width:"100%",height:"280px"}}></img>
-                <Link to="/SanPham/Giay/9" className='linkswiper'><FaSearchDollar/></Link>
-                <h5>Giày Adidas Không Dây Xanh</h5>
+                <img className='image' src={imagehot3}></img>
+                <a href="/SanPham/Giay/9" className='linkswiper'><AiFillEye/></a>
+                <p className='nameswiper'>Giày Adidas Không Dây Xanh</p>
             </SwiperSlide>
             <SwiperSlide className='box-swiper'>
-                <img className='image' src={imagehot4} style={{width:"100%",height:"280px"}}></img>
-                <Link to="/SanPham/Giay/12" className='linkswiper'><FaSearchDollar/></Link>
-                <h5>Giày Tiempo</h5>
+                <img className='image' src={imagehot4} ></img>
+                <a href="/SanPham/Giay/12" className='linkswiper'><AiFillEye/></a>
+                <p className='nameswiper'>Giày Tiempo</p>
             </SwiperSlide>
             <SwiperSlide className='box-swiper'>
-                <img className='image' src={imagehot5}  style={{width:"100%",height:"280px"}}></img>
-                <Link to="/SanPham/Giay/11" className='linkswiper'><FaSearchDollar/></Link>
-                <h5>Giày CR7</h5>
+                <img className='image' src={imagehot5}></img>
+                <a href="/SanPham/Giay/11" className='linkswiper'><AiFillEye/></a>
+                <p className='nameswiper'>Giày CR7</p>
             </SwiperSlide>
 
         </ Swiper>

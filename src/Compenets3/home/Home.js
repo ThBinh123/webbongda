@@ -12,12 +12,13 @@ import ramos from "./ramos.jpg"
 import vini from "./vini.jpg"
 import CoolPage from "../header/ScrollToTop"
 import Footer from "../footer/Footer"
+import { AiOutlineSearch,AiFillEye } from "react-icons/ai";
 export default function Home() {
     return (
         <div className="home">
             <div className="box-home">
 
-                <div className="Slide"> <ControlledCarousel /></div>
+                <div className="Slide"> <ControlledCarousel/></div>
             </div>
             <h1> SẢN PHẨM NỔI BẬT</h1>
             <div className="products-hot">
@@ -29,13 +30,19 @@ export default function Home() {
             </div>
             <div className="contain">
                 <div className="box">
-                    <img src={image1}></img>
+                    <img className="images" src={image1}></img>
+                    <a href="/SanPham" className='linkproduct'><AiOutlineSearch/></a>
+                    <p className="namecontain">PUMA</p>
                 </div>
                 <div className="box">
-                    <img src={image2}></img>
+                    <img className="images" src={image2}></img>
+                    <a href="/SanPham" className='linkproduct'><AiOutlineSearch/></a>
+                    <p className="namecontain">NIKE</p>
                 </div>
                 <div className="box">
-                    <img src={image3}></img>
+                    <img className="images" src={image3}></img>
+                    <a href="/SanPham" className='linkproduct'><AiOutlineSearch/></a>
+                    <p className="namecontain">ADIDAS</p>
                 </div>
 
             </div>
@@ -43,51 +50,27 @@ export default function Home() {
             <div className="main">
 
                 <div className="box-main">
-                    <img src={messi}></img>
-                    <p>Tiền Đạo</p>
+                    <img src={messi} className="image_main"></img>
+                    <p className="text_main">Tiền Đạo</p>
+                    <a href="/SanPham" className='linkmain'><AiFillEye/></a>
                 </div>
                 <div className="box-main">
-                    <img src={kevin}></img>
-                    <p>Tiền Vệ Trung Tâm</p>
+                    <img className="image_main" src={kevin}></img>
+                    <p className="text_main">Tiền Vệ Trung Tâm</p>
+                    <a href="/SanPham" className='linkmain'><AiFillEye/></a>
                 </div>
                 <div className="box-main">
-                    <img src={vini}></img>
-                    <p>Tiền Đạo Chạy Cánh</p>
+                    <img className="image_main"src={vini}></img>
+                    <p className="text_main">Tiền Đạo Chạy Cánh</p>
+                    <a href="/SanPham" className='linkmain'><AiFillEye/></a>
                 </div>
                 <div className="box-main">
-                    <img src={ramos}></img>
-                    <p>Hậu Vệ</p>
+                    <img className="image_main" src={ramos}></img>
+                    <p className="text_main">Hậu Vệ</p>
+                    <a href="/SanPham" className='linkmain'><AiFillEye/></a>
                 </div>
             </div>
-            {/* <div className="footer">
-                <div className="box-footer">
-                    <h3>HỖ TRỢ</h3>
-                    <p>GỌI TƯ VẤN ĐẶT HÀNG ONLINE(08:30-21:00 MỖI NGÀY)</p>
-                    <h4 style={{ color: "#f39c12" }}>0789.970.962</h4>
-                    <p>Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</p>
-                    <a><img src={shopee} style={{ width: "50%" }}></img></a>
-                    <p>Theo Dõi Chúng Tôi Trên Các Nền Tảng</p>
-                    <div className='internet'>
-                        <a><FaFacebook /></a>
-                        <a><FaInstagramSquare /></a>
-                        <a><FaYoutube /></a>
-                        <a><FaTiktok /></a>
-                    </div>
-
-                </div>
-                <div className="box-footer">
-                    <h3>HỆ THỐNG CỬA HÀNG</h3>
-                    <div><DarkVariantExample /></div>
-
-                </div>
-                <div className="box-footer">
-                    <h3>KHÁCH HÀNG NỔI TIẾNG</h3>
-                    <img src={imageFooter} ></img>
-
-                </div>
-
-            </div> */}
-            <div><Footer/></div>
+           <div><Footer/></div>
             <button><CoolPage/></button>
         </div>
 
